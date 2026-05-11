@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json()); // JSON දත්ත කියවීමට
 
+// Routes
+const employeeRoutes = require('./Backend/routes/employees');
+app.use('/api/employees', employeeRoutes);
+
 // MongoDB සම්බන්ධතාවය (Database Connection)
 // [cite: 133, 145]
 mongoose.connect(process.env.MONGO_URI)
