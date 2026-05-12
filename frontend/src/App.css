@@ -1,8 +1,43 @@
 .App {
   text-align: center;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.dashboard {
+  text-align: left;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #4CAF50;
+  font-weight: bold;
 }
 
 form {
@@ -10,6 +45,7 @@ form {
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
+  max-width: 400px;
 }
 
 input, select {
@@ -30,14 +66,28 @@ button:hover {
   background-color: #45a049;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
-li {
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.profile {
   background-color: #f9f9f9;
-  margin: 5px 0;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
+}
+
+.profile p {
+  margin: 10px 0;
 }
